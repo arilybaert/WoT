@@ -7,9 +7,7 @@
     padding: 10px;
 }
 
-
 .container{
-
     &__search{
         padding-left: 30px;
         display: flex;
@@ -32,8 +30,6 @@
        button{
             background-color: white;
             border: none;
-
-
         }
 
         .img-box{
@@ -48,12 +44,11 @@
                 object-fit: contain;
             }
         }
-
     }
 
     &__results{
-
         padding: 50px;
+
         .title{
             color:  $arteveldeOrange;
             font-family: $font-family-avenir;
@@ -68,9 +63,8 @@
             padding-top: 5px;
             padding-bottom: 5px;
             font-family: $font-family-avenir;
-
-
         }
+
         a{
            // text-decoration: none;
             color: black;
@@ -87,7 +81,6 @@
             border: none;
         }
 
-
         .img-box{
             width: 50px;
             height: 50px;
@@ -98,7 +91,6 @@
                 object-fit: cover;
             }
         }
-
     }
 }
 
