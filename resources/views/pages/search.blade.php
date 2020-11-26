@@ -11,10 +11,12 @@
                 <div class="container">
                     <div class="container__search">
 
-                        <form class="form" method="post" action="">
-                            <label>Student number:</label><input type="text" id="studentnumber" name="studentnumber">
+                        <form class="form" method="POST" action=" {{ route('search.student') }}">
+                            @csrf
+                            <label>Student number:</label>
+                            <input type="text" id="studentnumber" name="studentnumber">
                             <label>Start searching from:</label><input type="date" id="date" name="date">
-                            <button class="img-box" href=""><img  class="img-box__search" src="{{ asset('../images/search.png')}}"></button>
+                            <button class="img-box" type="submit"><img  class="img-box__search" src="{{ asset('../images/search.png')}}"></button>
                         </form>
                     </div>
 
