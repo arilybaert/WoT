@@ -1,0 +1,11 @@
+.img-box{
+    width: 5px;
+    height: 5px;
+    margin-top: 25px;
+
+    &__back{
+        width: 5%;
+        height: 5%;
+        object-fit: cover;
+    }
+}

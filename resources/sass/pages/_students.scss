@@ -1,0 +1,14 @@
+.container{
+    &__search{
+        p{
+            color: grey;
+            font-family: $font-family-avenir;
+            margin-left: 20px;
+            margin-top: 0px;
+        }
+
+        .local{
+            font-weight: bolder;
+        }
+    }
+}

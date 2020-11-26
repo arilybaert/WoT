@@ -1,0 +1,28 @@
+.footeritem{
+    color: white;
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100%;
+    padding: 10px 20px;
+    background-color: #F28705;
+    list-style: none;
+
+
+    a{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 30px;
+        font-family: $font-family-avenir;
+    }
+
+    li{
+        padding-top: 20px;
+    }
+}
+

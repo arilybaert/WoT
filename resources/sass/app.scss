@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'pages/logbook';
+@import 'pages/search';
+@import 'pages/students';
+
+
+@import 'partials/footer';
+
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #E8E8E8;
+}
+
+.pages{
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 50px;
+}
+
+.searchStudent{
+    background-color: #FFFFFF;
+    width: 1000px;
+    border-radius: 30px;
+
+}

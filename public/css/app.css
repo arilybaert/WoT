@@ -1,0 +1,166 @@
+.img-box {
+  width: 5px;
+  height: 5px;
+  margin-top: 25px;
+}
+
+.img-box__back {
+  width: 5%;
+  height: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title {
+  color: #F28705;
+  font-family: "avenir";
+  margin-top: 20px;
+  margin-left: 30px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.container__search {
+  padding-left: 30px;
+  display: flex;
+  height: 20px;
+}
+
+.container__search input {
+  border: 1px solid #F28705;
+  color: grey;
+  margin-left: 20px;
+  border-radius: 9px;
+}
+
+.container__search label {
+  color: grey;
+  font-family: "avenir";
+  margin-left: 50px;
+  margin-top: 0px;
+}
+
+.container__search button {
+  background-color: white;
+  border: none;
+}
+
+.container__search .img-box {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+.container__search .img-box__search {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.container__results {
+  padding: 50px;
+}
+
+.container__results .title {
+  color: #F28705;
+  font-family: "avenir";
+  padding: 10px;
+  text-align: center;
+}
+
+.container__results td {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "avenir";
+}
+
+.container__results a {
+  color: black;
+}
+
+.container__results td {
+  border-bottom: 0.5px #F28705 solid;
+}
+
+.container__results button {
+  background-color: #F28705;
+  color: white;
+  padding: 5px;
+  border: none;
+}
+
+.container__results .img-box {
+  width: 50px;
+  height: 50px;
+}
+
+.container__results .img-box__icon {
+  width: 50%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container__search p {
+  color: grey;
+  font-family: "avenir";
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.container__search .local {
+  font-weight: bolder;
+}
+
+.footeritem {
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100%;
+  padding: 10px 20px;
+  background-color: #F28705;
+  list-style: none;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 30px;
+  font-family: "avenir";
+}
+
+.footer li {
+  padding-top: 20px;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #E8E8E8;
+}
+
+.pages {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+}
+
+.searchStudent {
+  background-color: #FFFFFF;
+  width: 1000px;
+  border-radius: 30px;
+}
+
