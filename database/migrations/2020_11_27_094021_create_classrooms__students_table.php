@@ -17,6 +17,7 @@ class CreateClassroomsStudentsTable extends Migration
             $table->id();
             $table->date('scan_date');
             $table->time('scan_time');
+            $table->boolean('notified');
             $table->string('student_id', 50);
             $table->foreign('student_id')->references('nfc_id')->on('students')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('classroom_id')->references('id')->on('classrooms');
