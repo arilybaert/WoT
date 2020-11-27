@@ -3,7 +3,7 @@
 @section('content')
     <div class="pages">
 
-        <div class="searchStudent">
+        <div class="exams">
                 <div class="title">
                     <h2>Exams - Classrooms</h2>
                 </div>
