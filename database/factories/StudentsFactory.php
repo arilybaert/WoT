@@ -25,8 +25,7 @@ class StudentsFactory extends Factory
             'lastname' => $this->faker->name,
             'firstname' => $this->faker->firstNameMale,
             'email' => $this->faker->firstNameMale,
-            'phone' => $this->faker->phoneNumber,
-            'course' => $this->faker->randomLetter,
+            'nfc_id' => $this->faker->regexify('[A-Za-z0-9]{10}')
         ];
     }
 }

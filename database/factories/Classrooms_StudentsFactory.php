@@ -24,8 +24,8 @@ class Classrooms_StudentsFactory extends Factory
         return [
             'scan_date' => $this->faker->date($startDate = '2020-09-14', $endDate = 'now'),
             'scan_time' => $this->faker->time($format = 'H:i:s', $max = '16:45:00', $min = '08:00:00'),
-            'Classroom_id' => $this->faker->numberBetween($min = 1, $max = 3),
-            'Student_id' => $this->faker->numberBetween($min = 1, $max = 44),
+            'classroom_id' => $this->faker->numberBetween($min = 1, $max = 7),
+            'student_id' => $this->faker->numberBetween($min = 1, $max = 44),
         ];
     }
 }

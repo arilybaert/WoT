@@ -19,6 +19,11 @@
                             <button class="img-box" type="submit"><img  class="img-box__search" src="{{ asset('../images/search.png')}}"></button>
                         </form>
                     </div>
+                    @if (isset($students))
+                            @foreach ($students as $student )
+                            <p>{{$student->firstname}}</p>
+                        @endforeach
+                    @endif
 
                     <div class="container__results">
                         <TABLE>
