@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="container">
-                    <div class="container__search">
+                    <div class="container__header">
 
                         <form class="form" method="POST" action=" {{ route('search.student') }}">
                             @csrf

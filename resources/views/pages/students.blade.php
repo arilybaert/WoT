@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="container">
-                    <div class="container__search">
+                    <div class="container__header">
                         <p class="local">C6</p>
                         <p>Number of students:</p>
                     </div>

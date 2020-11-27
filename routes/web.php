@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExamsController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\LogbookController;
 use App\Http\Controllers\StudentsController;
@@ -20,6 +21,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/searchstudent', [SearchController::class, 'postSearch'])->name('search.student');
     Route::get('/logbook', [LogbookController::class, 'getIndex'])->name('logbook');
     Route::get('/students', [StudentsController::class, 'getIndex'])->name('students');
+    Route::get('/exams', [ExamsController::class, 'getIndex'])->name('exams');
+
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', [SearchController::class, 'getIndex'])->name('search');

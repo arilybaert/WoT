@@ -12,7 +12,7 @@
 
                 <div class="container">
 
-                    <div class="container__search">
+                    <div class="container__header">
                         <p>Your search history</p>
                     </div>
 
