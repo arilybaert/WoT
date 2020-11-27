@@ -10,4 +10,10 @@ class SearchController extends Controller
 
         return view('pages.search');
     }
+
+    public function postSearch(Request $r) {
+        dd($r->all());
+        return view('pages.search');
+
+    }
 }
