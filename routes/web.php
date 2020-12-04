@@ -19,7 +19,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', [SearchController::class, 'getIndex'])->name('search');
     Route::post('/searchstudent', [SearchController::class, 'postSearch'])->name('search.student');
     Route::get('/logbook', [LogbookController::class, 'getIndex'])->name('logbook');
-    Route::get('/students', [StudentsController::class, 'getIndex'])->name('students');
+
+    Route::get('/students/classroom/{time}/{date}', [StudentsController::class, 'getIndex'])->name('students.classroom');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', [SearchController::class, 'getIndex'])->name('search');

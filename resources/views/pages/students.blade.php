@@ -25,24 +25,16 @@
                             <TR>
                             <TD class="title">DATE</TD><TD  class="title">NAME</TD>
                             </TR>
+                            @foreach ($classrooms as $classroom)
+                                <TR>
+                                    <TD>{{$classroom->scan_date}}</TD><TD>{{$classroom->student->firstname}}</TD>
+                                </TR>
+                            @endforeach
+
                             <TR>
-                                <TD>5/10/2020</TD><TD>morgbeka</TD>
+                                <TD>5/10/2020</TD><TD>morgbeka... post empty</TD>
                             </TR>
-                            <TR>
-                                <TD>5/10/2020</TD><TD>morgbeka</TD>
-                            </TR>
-                            <TR>
-                                <TD>5/10/2020</TD><TD>morgbeka</TD>
-                            </TR>
-                            <TR>
-                                <TD>5/10/2020</TD><TD>morgbeka</TD>
-                            </TR>
-                            <TR>
-                                <TD>5/10/2020</TD><TD>morgbeka</TD>
-                            </TR>
-                            <TR>
-                                <TD>5/10/2020</TD><TD>morgbeka</TD>
-                            </TR>
+
                             </TABLE>
                     </div>
                 </div>
