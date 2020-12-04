@@ -22,6 +22,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/logbook', [LogbookController::class, 'getIndex'])->name('logbook');
     Route::get('/students', [StudentsController::class, 'getIndex'])->name('students');
     Route::get('/exams', [ExamsController::class, 'getIndex'])->name('exams');
+    Route::get('/examsStudents', [ExamsController::class, 'getExamsStudent'])->name('examsStudents');
 
 });
 

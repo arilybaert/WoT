@@ -3,7 +3,7 @@
 @section('content')
     <div class="pages">
 
-        <div class="exams">
+        <div class="searchStudent">
                 <div class="title">
                     <h2>Exams - Classrooms</h2>
                 </div>
@@ -36,7 +36,7 @@
                         <button class="classroom">C8</button>
                         <button class="classroom">AUDI 1</button>
                         <button class="classroom">AUDI 2</button>
-
+                        <a href="{{route('examsStudents') }}">test</a>
                     </div>
                 </div>
         </div>

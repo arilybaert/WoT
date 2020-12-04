@@ -11,6 +11,12 @@ class ExamsController extends Controller
         /*  $students = Students::all();
          var_dump($students); */
          return view('pages.exams');
+     }
 
+     public function getExamsStudent(){
+
+        /*  $students = Students::all();
+         var_dump($students); */
+         return view('pages.examsStudents');
      }
 }
