@@ -13,7 +13,6 @@
                 <div class="container">
                     <div class="container__header">
                         <p class="local">C6</p>
-                        <button class="notification">Send notification</button>
                     </div>
 
                     <div class="container__results">

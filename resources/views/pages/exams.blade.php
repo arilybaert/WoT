@@ -10,33 +10,33 @@
 
                 <div class="container">
                     <div class="container__results">
-                        <button class="classroom">A11</button>
-                        <button class="classroom">A12</button>
-                        <button class="classroom">A13</button>
-                        <button class="classroom">A14</button>
-                        <button class="classroom">A21</button>
-                        <button class="classroom">A22</button>
-                        <button class="classroom">A23</button>
-                        <button class="classroom">A24</button>
-                        <button class="classroom">B11</button>
-                        <button class="classroom">B12</button>
-                        <button class="classroom">B13</button>
-                        <button class="classroom">B14</button>
-                        <button class="classroom">B21</button>
-                        <button class="classroom">B22</button>
-                        <button class="classroom">B23</button>
-                        <button class="classroom">B24</button>
-                        <button class="classroom">C1</button>
-                        <button class="classroom">C2</button>
-                        <button class="classroom">C3</button>
-                        <button class="classroom">C4</button>
-                        <button class="classroom">C5</button>
-                        <button class="classroom">C6</button>
-                        <button class="classroom">C7</button>
-                        <button class="classroom">C8</button>
-                        <button class="classroom">AUDI 1</button>
-                        <button class="classroom">AUDI 2</button>
-                        <a href="{{route('examsStudents') }}">test</a>
+                        <button  class="classroom"> <a href="{{route('examsStudents') }}">A11</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">A12</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">A13</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">A14</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">A21</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">A22</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">A23</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">A24</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B11</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B12</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B13</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B14</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B21</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B22</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B23</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">B24</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C1</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C2</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C3</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C4</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C5</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C6</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C7</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">C8</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">AUDI 1</a></button>
+                        <button class="classroom"><a href="{{route('examsStudents') }}">AUDI 2</a></button>
+
                     </div>
                 </div>
         </div>
