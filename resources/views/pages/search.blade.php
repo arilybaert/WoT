@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="container">
-                    <div class="container__search">
+                    <div class="container__header">
 
                         <form class="form" method="POST" action=" {{ route('search.student') }}">
                             @csrf
@@ -32,6 +32,7 @@
                             <COLGROUP SPAN="2" ALIGN="center" WIDTH="60">
                             </COLGROUP>
                             <TR>
+<<<<<<< HEAD
                             <TD class="title">DATE</TD><TD  class="title">LESSON</TD><TD  class="title">Classroom</TD><TD  class="title">AMOUNT</TD><TD  class="title">SEND</TD><TD  class="title">NOTIFICATION SEND</TD>
                             </TR>
                             @if (isset($classrooms))
@@ -43,6 +44,12 @@
                             @endif
                             {{-- <TR>
                             <TD>5/10/2020</TD><TD>1&2</TD><TD><a href="{{route('students')}}">C6</a></TD><TD>26</TD><TD><button>Send notification</button></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
+=======
+                                <TD class="title">DATE</TD><TD  class="title">LESSON</TD><TD  class="title">LOCAL</TD><TD  class="title">AMOUNT</TD><TD  class="title">SEND</TD><TD  class="title">NOTIFICATION SEND</TD>
+                            </TR>
+                            <TR>
+                                <TD>5/10/2020</TD><TD>1&2</TD><TD><a href="{{route('students')}}">C6</a></TD><TD>26</TD><TD><button>Send notification</button></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
+>>>>>>> 7100edb772a413c0ebea801b0bfa39d09bda4bdf
                             </TR>
                             <TR>
                                 <TD>5/10/2020</TD><TD>1&2</TD><TD><a href="{{route('students')}}">C6</a></TD><TD>26</TD><TD><button>Send notification</button></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/check.png')}}"></TD>
@@ -55,11 +62,15 @@
                             </TR>
                             <TR>
                                 <TD>5/10/2020</TD><TD>1&2</TD><TD><a href="{{route('students')}}">C6</a></TD><TD>26</TD><TD><button>Send notification</button></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
+<<<<<<< HEAD
                             </TR> --}}
                             </TABLE>
+=======
+                            </TR>
+                        </TABLE>
+>>>>>>> 7100edb772a413c0ebea801b0bfa39d09bda4bdf
                     </div>
                 </div>
-
         </div>
     </div>
 

@@ -12,7 +12,7 @@
 
                 <div class="container">
 
-                    <div class="container__search">
+                    <div class="container__header">
                         <p>Your search history</p>
                     </div>
 
@@ -23,10 +23,10 @@
                             <COLGROUP SPAN="2" ALIGN="center" WIDTH="60">
                             </COLGROUP>
                             <TR>
-                            <TD class="title">DATE</TD><TD  class="title">LOCAL</TD><TD  class="title">NOTIFICATION SEND</TD>
+                                <TD class="title">DATE</TD><TD  class="title">LOCAL</TD><TD  class="title">NOTIFICATION SEND</TD>
                             </TR>
                             <TR>
-                            <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
+                                <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
                             </TR>
                             <TR>
                                 <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>

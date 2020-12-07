@@ -1,0 +1,76 @@
+.title{
+    color:  $arteveldeOrange;
+    font-family: $font-family-avenir;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    padding: 10px;
+
+    h2{
+        margin-top: 20px;
+    }
+}
+
+.container{
+    &__header{
+        padding-left: 30px;
+        display: flex;
+
+        p{
+            color: grey;
+            font-family: $font-family-avenir;
+            margin-left: 20px;
+            margin-top: 0px;
+        }
+    }
+
+}
+
+.container{
+
+    &__results{
+        padding: 50px;
+
+        .title{
+            color:  $arteveldeOrange;
+            font-family: $font-family-avenir;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td{
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-family: $font-family-avenir;
+        }
+
+        a{
+            color: black;
+        }
+
+        td{
+            border-bottom: 0.5px $arteveldeOrange solid;
+        }
+
+        button{
+            background-color: $arteveldeOrange;
+            color: white;
+            padding: 5px;
+            border: none;
+        }
+
+        .img-box{
+            width: 50px;
+            height: 50px;
+
+            &__icon{
+                width: 50%;
+                height: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+}

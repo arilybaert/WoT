@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="container">
-                    <div class="container__search">
+                    <div class="container__header">
                         <p class="local">C6</p>
                         <p>Number of students:</p>
                     </div>
@@ -34,8 +34,7 @@
                             <TR>
                                 <TD>5/10/2020</TD><TD>morgbeka... post empty</TD>
                             </TR>
-
-                            </TABLE>
+                        </TABLE>
                     </div>
                 </div>
 
