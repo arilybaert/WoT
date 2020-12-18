@@ -13,14 +13,14 @@
                         <form class="form" method="POST" action=" {{ route('search.student') }}">
                             @csrf
                             <label>Student number:</label>
-                            <input type="text" id="studentnumber" name="studentnumber" value="{{ old('studentnumber') }}">
-                            <label>Start searching from:</label><input type="date" id="date" name="date">
+                            <input type="text" id="studentnumber" name="studentnumber" value="{{ old('studentnumber') }}" required>
+                            <label>Start searching from:</label><input type="date" id="date" name="date" required>
                             <button class="img-box" type="submit"><img  class="img-box__search" src="{{ asset('../images/search.png')}}"></button>
                         </form>
                     </div>
                     @if (isset($search_student_name))
                             {{-- @foreach ($students as $student ) --}}
-                                <p class="name">Name: {{$search_student_name}}</p>
+                                <p class="name"> Name: {{$search_student_name}}</p>
                             {{-- @endforeach --}}
                     @endif
 
@@ -42,7 +42,7 @@
 
                                     <TR>
                                         <TD>{{$student->student->firstname}}</TD>
-                                        <TD>{{$student->student->email}}</TD>
+                                        <TD>{{$student->student->lastname}}</TD>
                                         <TD>{{$student->student_id}}</TD>
                                         <TD>{{$student->notified ? 'Yes' : 'No' }}</TD>
                                     </TR>
