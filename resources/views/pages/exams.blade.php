@@ -9,7 +9,7 @@
 
             <div class="container">
 
-
+{{-- //data van examens ipv lokaal--}}
                 <div class="container__results">
                     <button  class="classroom"> <a href="{{route('examsStudents') }}">A11</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">A12</a></button>

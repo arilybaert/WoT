@@ -33,7 +33,7 @@
                             <TR>
                             <TD class="title">Firstname</TD>
                             <TD  class="title">Lastname</TD>
-                            <TD  class="title">Student ID</TD>
+                            <TD  class="title">StudentID</TD>
                             <TD  class="title">Send</TD>
                             <TD  class="title">Notified</TD>
                             </TR>
