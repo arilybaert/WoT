@@ -14,7 +14,7 @@
             <li role="headeritem"><a href="{{route('search') }}">Search student</a></li>
             <li role="headeritem"><a href="{{route('logbook') }}">Logbook</a></li>
             <li role="headeritem"><a href="{{route('exams') }}">Exams</a></li>
-            <li role="headeritem"><a class="logout" ref="{{route('logout') }}">Log Out</a></li>
+            <li class="logout" role="headeritem"><a  ref="{{route('logout') }}">Log Out</a></li>
         </ul>
     </div>
 </body>

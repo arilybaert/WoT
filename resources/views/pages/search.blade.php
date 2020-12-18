@@ -20,7 +20,7 @@
                     </div>
                     @if (isset($search_student_name))
                             {{-- @foreach ($students as $student ) --}}
-                                <p>{{$search_student_name}}</p>
+                                <p class="name">Name: {{$search_student_name}}</p>
                             {{-- @endforeach --}}
                     @endif
 
@@ -34,8 +34,8 @@
                             <TD class="title">Firstname</TD>
                             <TD  class="title">Lastname</TD>
                             <TD  class="title">Student ID</TD>
-                            <TD  class="title">Send</TD>
                             <TD  class="title">Notified</TD>
+                            <TD><button>Send notification</button></TD>
                             </TR>
                             @if (isset($students))
                                 @foreach ($students as $student)
@@ -44,9 +44,7 @@
                                         <TD>{{$student->student->firstname}}</TD>
                                         <TD>{{$student->student->email}}</TD>
                                         <TD>{{$student->student_id}}</TD>
-                                        <TD><button>Send notification</button></TD>
                                         <TD>{{$student->notified ? 'Yes' : 'No' }}</TD>
-                                        <TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
                                     </TR>
                                 @endforeach
                             @endif

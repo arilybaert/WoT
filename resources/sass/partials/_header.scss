@@ -7,6 +7,7 @@
     background-color: #F28705;
     list-style: none;
 
+
     a{
         color: white;
         text-decoration: none;
@@ -14,6 +15,9 @@
         padding-left: 30px;
         padding-right: 30px;
         font-family: $font-family-avenir;
+
+
+
     }
 }
 
@@ -21,3 +25,7 @@
     color: white;
 }
 
+
+.logout{
+    margin-left: 60px;
+}
