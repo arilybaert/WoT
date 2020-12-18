@@ -17,43 +17,53 @@ class SearchController extends Controller
     public function postSearch(Request $r) {
         // @TODO make this a db
         $timeFrame = 2;
-
-
-
-        $students = Students::where('nfc_id', '=', $r->studentnumber)->get();
-        $classrooms = Classrooms_Students::where('student_id', '=', $r->studentnumber)
+        // dd($r);
+        $scans = Classrooms_Students::where('student_id', '=', $r->studentnumber)
+        ->where('scan_date', '>', $r->date)
         ->get();
+        $students = [];
+        $search_student_name = $scans[0]->student->firstname . ' ' . $scans[0]->student->lastname;
 
-        $t = $classrooms[0]->scan_time;
-        $phpTime =  strtotime($t);
+        foreach ($scans as $scan) {
+            $t = $scan->scan_time;
+            $phpTime =  strtotime($t);
+            $maxReadableTime = date("H:i:s", strtotime('+' . $timeFrame . ' hours',$phpTime));
+            $minReadableTime = date("H:i:s", strtotime('-' . $timeFrame . ' hours',$phpTime));
 
-        $maxReadableTime = date("H:i:s", strtotime('+' . $timeFrame . ' hours',$phpTime));
-        $minReadableTime = date("H:i:s", strtotime('-' . $timeFrame . ' hours',$phpTime));
-
-        $classrooms = Classrooms_Students::where('scan_time', '>', $minReadableTime)
-        ->where('scan_time', '<', $maxReadableTime)
-        ->groupBy('scan_date')
-        ->get();
-
-
-        $classrooms = Classrooms_Students::where('scan_time', '>', $minReadableTime)
-        ->where('scan_time', '<', $maxReadableTime)
-        ->selectRaw('*, count(*) AS amount')
-        ->groupBy('scan_date')
-        ->get();
+            $students_scans = Classrooms_Students::where('classroom_id', '=', $scan->classroom_id)
+            ->where('scan_date', '=', $scan->scan_date)
+            ->where('scan_time', '<', $maxReadableTime)
+            ->where('scan_time', '>', $minReadableTime)
+            // ->groupBy('student_id')
+            ->get();
 
 
-        // var_dump($classrooms[0]->scan_time);
-        // var_dump($classrooms[0]);
+            foreach ($students_scans as $students_scan) {
 
 
-        echo $maxReadableTime . ' _ ';
-        echo $minReadableTime . ' _ ';
+                // $students[$students_scan->student_id] = $students_scan;
+                array_push($students, $students_scan);
+            }
+        }
+        $tempArr = array_unique(array_column($students, 'student_id'));
+        // dd($tempArr);
+        dd(array_intersect_key($students, $tempArr));
+
+
+
+        // echo '<pre>';
+
+        // foreach ($students as $student ) {
+
+        //     var_dump($student);
+        // }
+        // echo '</pre>';
+
 
 
         return view('pages.search', [
-            'students' => $students,
-            'classrooms' => $classrooms
+            'students' => $students_scans,
+            'search_student_name'=> $search_student_name
         ]);
 
     }

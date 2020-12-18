@@ -10,15 +10,17 @@ class StudentsController extends Controller
 {
     use HasFactory;
     public function getIndex(Request $r){
-        $timeFrame = 2;
-
-
-        $t = $r->time;
+        dd($r);
         $d = $r->date;
+
+        $timeFrame = 2;
+        $t = $r->time;
         $phpTime =  strtotime($t);
 
-        $maxReadableTime = date("H:i:s", strtotime('+' . $timeFrame . ' hours',$phpTime));
-        $minReadableTime = date("H:i:s", strtotime('-' . $timeFrame . ' hours',$phpTime));
+        $maxReadableTime = date("H:i:s", strtotime('+' . $timeFrame . ' hours', $phpTime));
+        $minReadableTime = date("H:i:s", strtotime('-' . $timeFrame . ' hours', $phpTime));
+
+
 
         $classrooms = Classrooms_Students::where('scan_time', '>', $minReadableTime)
         ->where('scan_time', '<', $maxReadableTime)
