@@ -13,14 +13,14 @@
                         <form class="form" method="POST" action=" {{ route('search.student') }}">
                             @csrf
                             <label>Student number:</label>
-                            <input type="text" id="studentnumber" name="studentnumber" value="{{ old('studentnumber') }}">
-                            <label>Start searching from:</label><input type="date" id="date" name="date">
+                            <input type="text" id="studentnumber" name="studentnumber" value="{{ old('studentnumber') }}" required>
+                            <label>Start searching from:</label><input type="date" id="date" name="date" required>
                             <button class="img-box" type="submit"><img  class="img-box__search" src="{{ asset('../images/search.png')}}"></button>
                         </form>
                     </div>
                     @if (isset($search_student_name))
                             {{-- @foreach ($students as $student ) --}}
-                                <p class="name">Name: {{$search_student_name}}</p>
+                                <p class="name"> Name: {{$search_student_name}}</p>
                             {{-- @endforeach --}}
                     @endif
 
@@ -35,6 +35,7 @@
                             <TR>
                             <TD class="title">Firstname</TD>
                             <TD  class="title">Lastname</TD>
+                            <TD  class="title">Email</TD>
                             <TD  class="title">Student ID</TD>
                             <TD  class="title">Notified</TD>
                             <TD><button>Send notification</button></TD>
@@ -44,6 +45,7 @@
 
                                     <TR>
                                         <TD>{{$student->student->firstname}}</TD>
+                                        <TD>{{$student->student->lastname}}</TD>
                                         <TD>{{$student->student->email}}</TD>
                                         <input value="{{$student->student}}" name="ids[]" type="hidden">
                                         <TD>{{$student->student_id}}</TD>

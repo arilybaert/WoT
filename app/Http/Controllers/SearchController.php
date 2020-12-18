@@ -47,7 +47,7 @@ class SearchController extends Controller
         }
         $tempArr = array_unique(array_column($students, 'student_id'));
         $finalStudentsArray = array_intersect_key($students, $tempArr);
-        // dd($finalStudentsArray);
+       // dd($finalStudentsArray);
 
 
 

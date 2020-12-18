@@ -17,11 +17,6 @@
             margin-top: 0px;
         }
 
-/*        button{
-            background-color: white;
-            border: none;
-        }
- */
         .img-box{
             width: 30px;
             height: 30px;
@@ -39,11 +34,11 @@
     .name{
         margin-left: 60px;
         margin-top: 10px;
-        // text-transform: uppercase;
+        padding-left: 10px;
         color: $darkGrey;
         font-family: $font-family-avenir;
         font-weight: bolder;
     }
-}
 
+}
 
