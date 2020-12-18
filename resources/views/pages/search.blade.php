@@ -33,9 +33,9 @@
                             <TR>
                             <TD class="title">Firstname</TD>
                             <TD  class="title">Lastname</TD>
-                            <TD  class="title">StudentID</TD>
-                            <TD  class="title">Send</TD>
+                            <TD  class="title">Student ID</TD>
                             <TD  class="title">Notified</TD>
+                            <TD><button>Send notification</button></TD>
                             </TR>
                             @if (isset($students))
                                 @foreach ($students as $student)
@@ -44,9 +44,7 @@
                                         <TD>{{$student->student->firstname}}</TD>
                                         <TD>{{$student->student->lastname}}</TD>
                                         <TD>{{$student->student_id}}</TD>
-                                        <TD><button>Send notification</button></TD>
                                         <TD>{{$student->notified ? 'Yes' : 'No' }}</TD>
-                                        <TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
                                     </TR>
                                 @endforeach
                             @endif
