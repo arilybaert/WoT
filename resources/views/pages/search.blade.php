@@ -20,7 +20,7 @@
                     </div>
                     @if (isset($search_student_name))
                             {{-- @foreach ($students as $student ) --}}
-                                <p>{{$search_student_name}}</p>
+                                <p class="name">Name: {{$search_student_name}}</p>
                             {{-- @endforeach --}}
                     @endif
 
