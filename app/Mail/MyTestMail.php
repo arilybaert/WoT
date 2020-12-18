@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Mail;
-use App\Models\Details;
+use App\Models\Students;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -9,6 +9,7 @@ use Illuminate\Queue\SerializesModels;
 
 class MyTestMail extends Mailable
 {
+    public $students;
     use Queueable, SerializesModels;
 
     /**
@@ -16,9 +17,9 @@ class MyTestMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Students $students)
     {
-        //
+        $this->students = $students;
     }
 
     /**
@@ -26,10 +27,8 @@ class MyTestMail extends Mailable
      *
      * @return $this
      */
-    public function build(Details $details)
+    public function build()
     {
-        $this->details = $details;
-        return $this->view('emails.covidWarning', [
-        'details' => $this->details]);
+        return $this->view('emails.covidAlert');
     }
 }

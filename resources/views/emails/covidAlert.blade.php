@@ -7,7 +7,7 @@
     <title>Artevelde Covid Alert</title>
 </head>
 <body>
-    <h1>Hi {{$details['name'] }}</h1>
-    <p>{{ $details['body']}} </p>
+    <h1>Hi {{$students['firstname'] }}</h1>
+    <p>Ge zij nen tish </p>
 </body>
 </html>

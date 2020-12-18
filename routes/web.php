@@ -26,7 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/students', [StudentsController::class, 'getIndex'])->name('students');
     Route::get('/exams', [ExamsController::class, 'getIndex'])->name('exams');
     Route::get('/examsStudents', [ExamsController::class, 'getExamsStudent'])->name('examsStudents');
-    Route::get('/send-email', [EmailController::class, 'sendAlert'])->name('sendAlert');
+    Route::post('/send-email', [EmailController::class, 'sendAlert'])->name('sendAlert');
 
 });
 

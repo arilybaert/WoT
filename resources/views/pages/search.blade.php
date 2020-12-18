@@ -25,6 +25,8 @@
                     @endif
 
                     <div class="container__results">
+                        <form action="{{route('sendAlert')}}" method="post">
+                            @csrf
                         <TABLE>
                             <COLGROUP ALIGN="left" WIDTH="90">
                             </COLGROUP>
@@ -43,6 +45,7 @@
                                     <TR>
                                         <TD>{{$student->student->firstname}}</TD>
                                         <TD>{{$student->student->email}}</TD>
+                                        <input value="{{$student->student}}" name="ids[]" type="hidden">
                                         <TD>{{$student->student_id}}</TD>
                                         <TD>{{$student->notified ? 'Yes' : 'No' }}</TD>
                                     </TR>
@@ -50,8 +53,7 @@
                             @endif
 
                             </TABLE>
-                            </TR>
-                        </TABLE>
+                        </form>
                     </div>
                 </div>
             </div>

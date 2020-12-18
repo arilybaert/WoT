@@ -4,26 +4,30 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Mail\MyTestMail;
+use App\Models\Students;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    public function sendAlert() {
+    public function sendAlert(Request $r) {
+        // dd(json_decode($r->ids[0]));
+        $studentsInfo = $r->ids;
+
+
         $details = [
             'name' => 'Ari',
-            'body' => " You've been in in contact with someone who has tested positive with COVID-19. We kindly advise you to make an appointment with a testcenter ASAP. Until we get the testresults you've been excuses from all classes"
+            'body' => " Ge zij nen tish"
         ];
-        // \Mail::to('ari_lybaert@outlook.com')->send(new \App\Mail\MyTestMail($details));
 
         // Loop over emails:
-        // foreach (['taylor@example.com', 'dries@example.com'] as $recipient) {
-        //     Mail::to($recipient)->send(new OrderShipped($order));
-        // }
+        foreach ($studentsInfo as $recipient) {
 
+            $students = Students::where('nfc_id', '=', json_decode($recipient)->nfc_id)->get();
+            // dd($student);
+            Mail::to($recipient)->send(new MyTestMail($students));
+        }
 
-
-        Mail::to('ari_lybaert@outlook.com')->send(new MyTestMail($details));
         dd("Email is sent");
     }
 }
