@@ -46,8 +46,8 @@ class SearchController extends Controller
             }
         }
         $tempArr = array_unique(array_column($students, 'student_id'));
-        // dd($tempArr);
-        dd(array_intersect_key($students, $tempArr));
+        $finalStudentsArray = array_intersect_key($students, $tempArr);
+        // dd($finalStudentsArray);
 
 
 
@@ -62,7 +62,7 @@ class SearchController extends Controller
 
 
         return view('pages.search', [
-            'students' => $students_scans,
+            'students' => $finalStudentsArray,
             'search_student_name'=> $search_student_name
         ]);
 

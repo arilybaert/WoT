@@ -42,7 +42,7 @@
 
                                     <TR>
                                         <TD>{{$student->student->firstname}}</TD>
-                                        <TD>{{$student->student->lastname}}</TD>
+                                        <TD>{{$student->student->email}}</TD>
                                         <TD>{{$student->student_id}}</TD>
                                         <TD><button>Send notification</button></TD>
                                         <TD>{{$student->notified ? 'Yes' : 'No' }}</TD>

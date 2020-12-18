@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ExamsController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\LogbookController;
@@ -25,7 +26,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/students', [StudentsController::class, 'getIndex'])->name('students');
     Route::get('/exams', [ExamsController::class, 'getIndex'])->name('exams');
     Route::get('/examsStudents', [ExamsController::class, 'getExamsStudent'])->name('examsStudents');
+    Route::get('/send-email', [EmailController::class, 'sendAlert'])->name('sendAlert');
 
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', [SearchController::class, 'getIndex'])->name('search');
+
