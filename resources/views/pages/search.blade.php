@@ -2,11 +2,10 @@
 
 @section('content')
     <div class="pages">
-
         <div class="searchStudent">
-                <div class="title">
-                    <h2>Search student</h2>
-                </div>
+            <div class="title">
+                <h2>Search student</h2>
+            </div>
 
                 <div class="container">
                     <div class="container__header">
@@ -57,7 +56,7 @@
                         </TABLE>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
-
 @endsection

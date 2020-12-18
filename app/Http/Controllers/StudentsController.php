@@ -30,7 +30,8 @@ class StudentsController extends Controller
         // dd($classrooms);
 
         return view('pages.students', [
-            "classrooms" => $classrooms
+            "classrooms" => $classrooms,
+            "classroom" => $classrooms[0]
     ]);
     }
 }

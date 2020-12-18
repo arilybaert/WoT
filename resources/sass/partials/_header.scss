@@ -1,8 +1,4 @@
-.footeritem{
-    color: white;
-}
-
-.footer{
+.header{
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -10,17 +6,18 @@
     padding: 10px 20px;
     background-color: #F28705;
     list-style: none;
-    
+
     a{
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
         font-family: $font-family-avenir;
     }
+}
 
-    li{
-        padding-top: 20px;
-    }
+.headeritem{
+    color: white;
 }
 

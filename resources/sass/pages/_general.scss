@@ -23,11 +23,9 @@
             margin-top: 0px;
         }
     }
-
 }
 
 .container{
-
     &__results{
         padding: 50px;
 
@@ -45,6 +43,7 @@
             padding-top: 5px;
             padding-bottom: 5px;
             font-family: $font-family-avenir;
+            width: auto;
         }
 
         a{
@@ -67,8 +66,8 @@
             height: 50px;
 
             &__icon{
-                width: 50%;
-                height: 50%;
+                width: 30px;
+                // height: 60%;
                 object-fit: cover;
             }
         }

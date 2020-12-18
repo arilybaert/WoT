@@ -2,7 +2,6 @@
     &__header{
         padding-left: 30px;
         display: flex;
-   
 
         input{
             border: 1px solid  $arteveldeOrange;
@@ -35,6 +34,14 @@
                 object-fit: contain;
             }
         }
+    }
+
+    .name{
+        margin-left: 50px;
+        // text-transform: uppercase;
+        color: $darkGrey;
+        font-family: $font-family-avenir;
+        font-weight: bolder;
     }
 }
 

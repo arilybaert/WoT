@@ -1,13 +1,13 @@
 @import 'variables';
-@import 'pages/logbook';
-@import 'pages/search';
-@import 'pages/students';
-@import 'pages/exams';
+
 @import 'pages/general';
 @import 'login.scss';
 
-
-@import 'partials/footer';
+@import 'partials/header';
+@import 'pages/search';
+@import 'pages/students';
+@import 'pages/logbook';
+@import 'pages/exams';
 
 
 body{
@@ -20,16 +20,16 @@ body{
 }
 
 .pages{
-        margin-left: 150px;
-        margin-right: 150px;
-        margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 15px;
 }
 
 .searchStudent{
     background-color: #FFFFFF;
     width: 1000px;
     border-radius: 30px;
-
+    margin: auto;
 }
 
 
