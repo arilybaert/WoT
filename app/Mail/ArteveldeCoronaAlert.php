@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MyTestMail extends Mailable
+class ArteveldeCoronaAlert extends Mailable
 {
     public $students;
     use Queueable, SerializesModels;
@@ -17,9 +17,10 @@ class MyTestMail extends Mailable
      *
      * @return void
      */
-    public function __construct(Students $students)
+    public function __construct()
+    // public function __construct(Students $students)
     {
-        $this->students = $students;
+        // $this->students = $students;
     }
 
     /**
