@@ -53,7 +53,13 @@
                                     </TR>
                                 @endforeach
                             @endif
+                            @if (isset($error))
 
+                                <TR>
+                                    <TD>{{$error}}</TD>
+
+                                </TR>
+                        @endif
                             </TABLE>
                         </form>
                     </div>
