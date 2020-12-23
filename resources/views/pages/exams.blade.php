@@ -14,7 +14,7 @@
                     @if (isset($classrooms))
                         @foreach ( $classrooms as $classroom)
                             <button  class="classroom">
-                                <a href="{{route('examsStudents', $classroom->classroom_id) }}">{{ $classroom->classroom->title }}</a>
+                                <a href="{{route('dates', $classroom->classroom_id) }}">{{ $classroom->classroom->title }}</a>
                             </button>
 
 

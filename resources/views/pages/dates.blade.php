@@ -11,22 +11,19 @@
 
                 <div class="container__results">
 
-                    {{-- @if (isset($classrooms))
-                        @foreach ( $classrooms as $classroom)
+                    @if (isset($dates))
+                        @foreach ( $dates as $date)
                             <button  class="classroom">
-                                <a href="{{route('examsStudents', $classroom->classroom_id) }}">{{ $classroom->classroom->title }}</a>
+                                <a href="{{route('examsStudents', [$date->scan_date, $date->classroom_id]) }}">{{ $date->scan_date }}</a>
                             </button>
-
-
-
                         @endforeach
-                    @endif --}}
-                    <button  class="classroom"> <a href="{{route('examsStudents') }}">8/01/2021</a></button>
+                    @endif
+                    {{-- <button  class="classroom"> <a href="{{route('examsStudents') }}">8/01/2021</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">11/01/2021</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">14/01/2021</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">15/01/2021</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">21/01/2021</a></button>
-                    <button class="classroom"><a href="{{route('examsStudents') }}">24/01/2021</a></button>
+                    <button class="classroom"><a href="{{route('examsStudents') }}">24/01/2021</a></button> --}}
 
                 </div>
             </div>

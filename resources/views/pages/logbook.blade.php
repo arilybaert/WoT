@@ -18,23 +18,18 @@
                         <COLGROUP ALIGN="left" WIDTH="90"></COLGROUP>
                         <COLGROUP SPAN="2" ALIGN="center" WIDTH="60"></COLGROUP>
                         <TR>
-                            <TD class="title">DATE</TD><TD  class="title">LOCAL</TD><TD  class="title">NOTIFICATION SEND</TD>
+                            <TD class="title">NAME</TD><TD  class="title">DATE</TD>
                         </TR>
-                        <TR>
-                            <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
-                        </TR>
-                        <TR>
-                            <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
-                        </TR>
-                        <TR>
-                            <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/cross.png')}}"></TD>
-                        </TR>
-                        <TR>
-                            <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/check.png')}}"></TD>
-                        </TR>
-                        <TR>
-                            <TD>5/10/2020</TD><TD><a href="{{route('students')}}">C6</a></TD><TD class="img-box"><img  class="img-box__icon" src="{{ asset('../images/check.png')}}"></TD>
-                        </TR>
+                        @if (isset($logs))
+                            @foreach ($logs as $log)
+                                <TR>
+                                    <TD>{{$log->student->firstname . ' ' . $log->student->lastname}}</TD>
+                                    <TD>{{$log->notified_on}}</TD>
+
+                                </TR>
+                            @endforeach
+
+                        @endif
                     </TABLE>
                 </div>
             </div>

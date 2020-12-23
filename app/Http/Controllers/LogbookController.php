@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Logbook;
 use Illuminate\Http\Request;
 
 class LogbookController extends Controller
 {
     public function getIndex(){
 
-        /*  $students = Students::all();
-         var_dump($students); */
-         return view('pages.logbook');
+        $logs = Logbook::get();
+
+         return view('pages.logbook', [
+             'logs' => $logs
+         ]);
 
      }
 }

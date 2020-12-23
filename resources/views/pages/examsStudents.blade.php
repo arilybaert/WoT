@@ -18,26 +18,18 @@
                         <COLGROUP ALIGN="left" WIDTH="90"></COLGROUP>
                         <COLGROUP SPAN="2" ALIGN="center" WIDTH="60"></COLGROUP>
                         <TR>
-                            <TD class="title">DATE</TD><TD  class="title">VOORMIDDAG</TD><TD  class="title">NAMIDDAG</TD>
+                            <TD class="title">DATE</TD><TD  class="title">HOUR</TD><TD  class="title">NAME</TD>
                         </TR>
-                        <TR>
-                            <TD>8/01/2021</TD><TD>An-Sophie</TD><TD>An-Sophie</TD>
-                        </TR>
-                        <TR>
-                            <TD>8/01/2021</TD><TD>Janne</TD><TD>An-Sophie</TD>
-                        </TR>
-                        <TR>
-                            <TD>8/01/2021</TD><TD>Adam</TD><TD>An-Sophie</TD>
-                        </TR>
-                        <TR>
-                            <TD>8/01/2021</TD><TD>Lise</TD><TD>An-Sophie</TD>
-                        </TR>
-                        <TR>
-                            <TD>8/01/2021</TD><TD>Lukas</TD><TD>An-Sophie</TD>
-                        </TR>
-                        <TR>
-                            <TD>8/01/2021</TD><TD>Robin</TD><TD>An-Sophie</TD>
-                        </TR>
+                        @if (isset($students))
+                            @foreach ($students as $student)
+                            <TR>
+                                <TD>{{$student->scan_date}}</TD>
+                                <TD>{{$student->scan_time}}</TD>
+                                <TD>{{$student->student->firstname . ' ' . $student->student->lastname}}</TD>
+                            </TR>
+                            @endforeach
+                        @endif
+
                     </TABLE>
                 </div>
             </div>
