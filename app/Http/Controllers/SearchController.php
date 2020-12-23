@@ -48,6 +48,7 @@ class SearchController extends Controller
                 ->where('scan_date', '=', $scan->scan_date)
                 ->where('scan_time', '<', $maxReadableTime)
                 ->where('scan_time', '>', $minReadableTime)
+                ->where('exam', '!=', 1)
                 // ->groupBy('student_id')
                 ->get();
 

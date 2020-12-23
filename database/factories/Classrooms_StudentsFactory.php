@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Classrooms;
 use App\Models\Classrooms_Students;
+use App\Models\Students;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class Classrooms_StudentsFactory extends Factory
@@ -21,11 +23,18 @@ class Classrooms_StudentsFactory extends Factory
      */
     public function definition()
     {
+        $dt = $this->faker->dateTimeBetween($startDate = 'now', $endDate = '+1 month');
+        $date = $dt->format("Y-m-d");
+
+        $students = Students::all()->pluck('nfc_id')->toArray();
+        $classrooms = Classrooms::all()->pluck('id')->toArray();
+
         return [
-            'scan_date' => $this->faker->date($startDate = '2020-09-14', $endDate = 'now'),
-            'scan_time' => $this->faker->time($format = 'H:i:s', $max = '16:45:00', $min = '08:00:00'),
-            'classroom_id' => $this->faker->numberBetween($min = 1, $max = 7),
-            'student_id' => $this->faker->numberBetween($min = 1, $max = 44),
+            'scan_date' => $date, //$this->faker->date($startDate = '2020-09-14', $endDate = 'now'),
+            'scan_time' =>  date('H:i:s', rand(28800, 61200)),
+            'classroom_id' => $this->faker->randomElement($classrooms), //$this->faker->numberBetween($min = 1, $max = 7),
+            'student_id' => $this->faker->randomElement($students), // $this->faker->numberBetween($min = 1, $max = 44),
+            'exam' => 1
         ];
     }
 }
