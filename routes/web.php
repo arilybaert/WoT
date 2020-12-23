@@ -25,7 +25,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/students/classroom/{time}/{date}', [StudentsController::class, 'getIndex'])->name('students.classroom');
     Route::get('/students', [StudentsController::class, 'getIndex'])->name('students');
     Route::get('/exams', [ExamsController::class, 'getIndex'])->name('exams');
-    Route::get('/examsStudents', [ExamsController::class, 'getExamsStudent'])->name('examsStudents');
+    Route::get('/examsStudents/{id}', [ExamsController::class, 'getExamsStudent'])->name('examsStudents');
     Route::post('/send-email', [EmailController::class, 'sendAlert'])->name('sendAlert');
 
 });

@@ -11,7 +11,18 @@
 
 {{-- //data van examens ipv lokaal--}}
                 <div class="container__results">
-                    <button  class="classroom"> <a href="{{route('examsStudents') }}">A11</a></button>
+
+                    @if (isset($classrooms))
+                        @foreach ( $classrooms as $classroom)
+                            <button  class="classroom">
+                                <a href="{{route('examsStudents', $classroom->classroom_id) }}">{{ $classroom->classroom->title }}</a>
+                            </button>
+
+
+
+                        @endforeach
+                    @endif
+                    {{-- <button  class="classroom"> <a href="{{route('examsStudents') }}">A11</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">A12</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">A13</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">A14</a></button>
@@ -36,7 +47,7 @@
                     <button class="classroom"><a href="{{route('examsStudents') }}">C7</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">C8</a></button>
                     <button class="classroom"><a href="{{route('examsStudents') }}">AUDI 1</a></button>
-                    <button class="classroom"><a href="{{route('examsStudents') }}">AUDI 2</a></button>
+                    <button class="classroom"><a href="{{route('examsStudents') }}">AUDI 2</a></button> --}}
                 </div>
             </div>
         </div>
