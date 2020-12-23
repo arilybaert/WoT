@@ -9,7 +9,6 @@
 
             <div class="container">
 
-{{-- //data van examens ipv lokaal--}}
                 <div class="container__results">
 
                     @if (isset($classrooms))

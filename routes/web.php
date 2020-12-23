@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/examsStudents/{id}', [ExamsController::class, 'getExamsStudent'])->name('examsStudents');
     Route::post('/send-email', [EmailController::class, 'sendAlert'])->name('sendAlert');
 
+    
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', [SearchController::class, 'getIndex'])->name('search');
