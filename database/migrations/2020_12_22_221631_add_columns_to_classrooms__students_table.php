@@ -14,7 +14,7 @@ class AddColumnsToClassroomsStudentsTable extends Migration
     public function up()
     {
         Schema::table('classrooms__students', function (Blueprint $table) {
-            $table->boolean('exam');
+            $table->boolean('exam')->default(0);
         });
     }
 
