@@ -21304,8 +21304,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/morganebekaert/Code/2020-2021 - Derde jaar/WebOfThings/Eindopdracht/backoffice/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/morganebekaert/Code/2020-2021 - Derde jaar/WebOfThings/Eindopdracht/backoffice/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/arilybaert/Sites/wot-nfc/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/arilybaert/Sites/wot-nfc/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

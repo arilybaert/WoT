@@ -36,7 +36,10 @@ class EmailController extends Controller
             */
 
         }
-
-        dd("Email is sent");
+        $studentsInfo = $studentsInfo;
+        // dd($studentsInfo);
+        return view('pages.send-email', [
+            'emails' => $studentsInfo
+        ]);
     }
 }

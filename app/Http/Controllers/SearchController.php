@@ -23,7 +23,7 @@ class SearchController extends Controller
         */
 
         $scans = Classrooms_Students::where('student_id', '=', $r->studentnumber)
-        ->where('scan_date', '>', $r->date)
+        ->where('scan_date', '>=', $r->date)
         ->get();
         $students = [];
 
