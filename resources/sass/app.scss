@@ -32,9 +32,14 @@ body{
     margin: auto;
 }
 .o-send-email {
-    margin: 0 auto;
+    margin: 4rem;
     padding: 1rem;
     border-radius: 30px;
     background-color: #FFFFFF;
+}
+
+.a-send-email-header {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
